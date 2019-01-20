@@ -3,6 +3,14 @@ menu "MSM SoC Audio support"
 config SND_SOC_MSM_HOSTLESS_PCM
 	tristate
 
+config SND_MSM_SOC
+	tristate "SoC Audio for the MSM series chips"
+	depends on ARCH_MSM7X27
+	select SND_MSM_SOC_MSM7K
+	default n
+	help
+	  To add support for ALSA PCM driver for MSM board
+
 config SND_SOC_MSM_QDSP6V2_INTF
 	bool "SoC Q6 audio driver for APQ8084"
 	help
