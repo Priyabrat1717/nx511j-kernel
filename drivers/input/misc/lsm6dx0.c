@@ -1978,7 +1978,7 @@ static ssize_t attr_set_polling_rate_acc(struct kobject *kobj,
 	struct lsm6dx0_status *stat = dev_get_drvdata(dev);
 	unsigned long interval_us, interval_ms;
 
-	if (strict_strtoul(buf, 10, &interval_ms))
+	if (kstrtoul(buf, 10, &interval_ms))
 		return -EINVAL;
 	if (!interval_ms)
 		return -EINVAL;
@@ -2026,7 +2026,7 @@ static ssize_t attr_set_enable_acc(struct kobject *kobj,
 	struct lsm6dx0_status *stat = dev_get_drvdata(dev);
 	unsigned long val;
 
-	if (strict_strtoul(buf, 10, &val))
+	if (kstrtoul(buf, 10, &val))
 		return -EINVAL;
 
 	if (val)
@@ -2074,7 +2074,7 @@ static ssize_t attr_set_range_acc(struct kobject *kobj,
 	uint8_t range;
 	int32_t err;
 
-	if (strict_strtoul(buf, 10, &val))
+	if (kstrtoul(buf, 10, &val))
 		return -EINVAL;
 
 	switch (val) {
@@ -2147,7 +2147,7 @@ static ssize_t attr_set_aa_filter(struct kobject *kobj,
 	uint8_t frequency;
 	int32_t err;
 
-	if (strict_strtoul(buf, 10, &val))
+	if (kstrtoul(buf, 10, &val))
 		return -EINVAL;
 
 	switch (val) {
@@ -2224,7 +2224,7 @@ static ssize_t attr_set_polling_rate_gyr(struct kobject *kobj,
 	struct lsm6dx0_status *stat = dev_get_drvdata(dev);
 	unsigned long interval_us, interval_ms;
 
-	if (strict_strtoul(buf, 10, &interval_ms))
+	if (kstrtoul(buf, 10, &interval_ms))
 		return -EINVAL;
 	if (!interval_ms)
 		return -EINVAL;
@@ -2256,7 +2256,7 @@ static ssize_t attr_set_enable_gyr(struct kobject *kobj,
 	struct lsm6dx0_status *stat = dev_get_drvdata(dev);
 	unsigned long val;
 
-	if (strict_strtoul(buf, 10, &val))
+	if (kstrtoul(buf, 10, &val))
 		return -EINVAL;
 
 	if (val)
@@ -2304,7 +2304,7 @@ static ssize_t attr_set_range_gyr(struct kobject *kobj,
 	uint8_t range;
 	int32_t err = -1;
 
-	if (strict_strtoul(buf, 10, &val))
+	if (kstrtoul(buf, 10, &val))
 		return -EINVAL;
 
 	switch (val) {
@@ -2357,7 +2357,7 @@ static ssize_t attr_set_pmode(struct kobject *kobj,
 	struct lsm6dx0_status *stat = dev_get_drvdata(dev);
 	unsigned long val;
 
-	if (strict_strtoul(buf, 10, &val))
+	if (kstrtoul(buf, 10, &val))
 		return -EINVAL;
 
 	lsm6dx0_acc_change_pm_state(stat, val);

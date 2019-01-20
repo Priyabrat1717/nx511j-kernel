@@ -546,7 +546,6 @@ static int hall_device_probe(struct platform_device *pdev)
 		goto power_init_failed;
 
 	SENSOR_LOG_INFO("HALL Driver version %s\n", HALL_DRIVER_VERSION);
-	SENSOR_LOG_INFO("HALL Driver Built at %s, %s\n", __TIME__, __DATE__);
 	SENSOR_LOG_INFO("probe success\n");
 	return 0;
 
