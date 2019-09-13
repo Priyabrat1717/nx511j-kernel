@@ -127,7 +127,7 @@
 	qcom,platform-reset-gpio = <&msm_gpio 25 0>;
 	qcom,platform-bklight-en-gpio = <&msm_gpio 98 0>;
 */
-	qcom,dsi-pref-prim-pan = <&dsi_sharp_nt35595_1080_5p0_cmd>;
+	qcom,dsi-pref-prim-pan = <&dsi_hx8394d_720_cmd>;
 	pinctrl-names = "mdss_default", "mdss_sleep";
 	pinctrl-0 = <&mdss_te_active &mdss_te_check_active>;
 	pinctrl-1 = <&mdss_te_suspend &mdss_te_check_suspend>;
