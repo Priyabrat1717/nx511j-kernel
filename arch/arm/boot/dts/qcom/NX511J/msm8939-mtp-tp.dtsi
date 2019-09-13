@@ -12,8 +12,8 @@
 
 &soc {
 	i2c@78b9000 { /* BLSP1 QUP5 */
-		gt1x@5d {
-			compatible = "goodix,gt1x";
+		gt9xx@5d {
+			compatible = "goodix,gt9xx";
 			reg = <0x5d>;
 			interrupt-parent = <&msm_gpio>;
 			interrupts = <13 0x2008>;
