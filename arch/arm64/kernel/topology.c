@@ -126,7 +126,7 @@ static int __init parse_cluster(struct device_node *cluster, int depth)
 	struct device_node *c;
 	static int cluster_id __initdata;
 	int core_id = 0;
-	int i, ret;
+	int i, ret,lencheck;
 
 	/*
 	 * First check for child clusters; we currently ignore any
@@ -135,7 +135,11 @@ static int __init parse_cluster(struct device_node *cluster, int depth)
 	 */
 	i = 0;
 	do {
-		snprintf(name, sizeof(name), "cluster%d", i);
+		
+                lencheck = snprintf(name, sizeof(name), "cluster%d", i);
+                if (lencheck <= 0 || sizeof(name) <= lencheck)
+                    continue;
+
 		c = of_get_child_by_name(cluster, name);
 		if (c) {
 			leaf = false;
