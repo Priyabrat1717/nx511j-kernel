@@ -82,7 +82,7 @@
 			qcom,pins = <&gp 12>;
 			qcom,num-grp-pins = <1>;
 			qcom,pin-func = <0>;
-			label = "gt1x_rst_pin";
+			label = "gt9xx_rst_pin";
 
 			gt9xx_rst_active: gt9xx_rst_active {
 				drive-strength = <10>;
