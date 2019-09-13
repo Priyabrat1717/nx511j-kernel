@@ -10,8 +10,8 @@
  * GNU General Public License for more details.
  */
  
-#include "nubia-dsi-sharp-panel-nt35595-1080p-5p0-video.dtsi"
-#include "nubia-dsi-sharp-panel-nt35595-1080p-5p0-command.dtsi"
+#include "dsi-panel-hx8394d-720p-video.dtsi"
+#include "dsi-panel-hx8394d-720p-command.dtsi"
 
 #include "msm8939-lcd-pinctrl.dtsi"
 
