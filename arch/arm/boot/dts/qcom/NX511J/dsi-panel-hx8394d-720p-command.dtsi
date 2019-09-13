@@ -19,7 +19,7 @@
 	dsi_hx8394d_720_cmd: qcom,mdss_dsi_hx8394d_720p_command {
 		qcom,mdss-dsi-panel-name = "hx8394d 720p command mode dsi panel";
 		qcom,mdss-dsi-panel-controller = <&mdss_dsi0>;
-		qcom,mdss-dsi-panel-type = "dsi_command_mode";
+		qcom,mdss-dsi-panel-type = "dsi_cmd_mode";
 		qcom,mdss-dsi-panel-destination = "display_1";
 		qcom,mdss-dsi-panel-framerate = <60>;
 		qcom,mdss-dsi-virtual-channel-id = <0>;
